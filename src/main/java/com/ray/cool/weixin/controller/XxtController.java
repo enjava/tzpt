@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @Controller
-@RequestMapping("/xxt")
+@RequestMapping("/weixin")
 public class XxtController {
 	
 	@RequestMapping(value="/api",method = RequestMethod.GET)

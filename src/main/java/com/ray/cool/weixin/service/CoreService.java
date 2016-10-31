@@ -76,7 +76,7 @@ public class CoreService {
 				String eventType = requestMap.get("Event");// 事件类型
 				
 				if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {// 订阅
-					respContent = "欢迎关注沪动校讯通！";
+					respContent = "欢迎关注酷么加盟商平台！";
 					return MessageResponse.getTextMessage(fromUserName , toUserName , respContent);
 				} else if (eventType.equals(MessageUtil.EVENT_TYPE_UNSUBSCRIBE)) {// 取消订阅
 					// TODO 取消订阅后用户再收不到公众号发送的消息，因此不需要回复消息
