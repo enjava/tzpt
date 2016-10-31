@@ -166,9 +166,10 @@ public class BaseDaoImpl<T, PK extends Serializable> implements BaseDao<T, PK> {
 	 */
 	public void delete(List<T> list){
 		if(list!=null&&!list.isEmpty()){
-			list.forEach(T -> {
-				getSession().delete(T);
-			});
+            for (T t:list) {
+                getSession().delete(t);
+            }
+
 		}
 	}
 
