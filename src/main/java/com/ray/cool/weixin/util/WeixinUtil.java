@@ -1,10 +1,16 @@
 package com.ray.cool.weixin.util;
 
-import com.sun.deploy.net.HttpResponse;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.ray.cool.weixin.entity.AccessToken;
 import com.sun.jmx.snmp.Timestamp;
 import net.sf.json.JSONObject;
-import org.springframework.http.HttpEntity;
-import sun.net.www.http.HttpClient;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
