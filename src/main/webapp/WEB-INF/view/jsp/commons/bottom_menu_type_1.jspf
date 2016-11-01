@@ -1,0 +1,28 @@
+	<div class="bottom_menu_div" id="bottom_menu_div" style="position:fixed; bottom:0px; width:100%;">
+		<img src="" srcX="${pageContext.request.contextPath}/image/bottom_menu.png" border="0" usemap="#Map16" class="index_prod_img" onclick="javascript:;" />
+		<map name="Map16">
+		  <area shape="rect" coords="29,34,142,155" href="javascript:;">
+		  <area shape="rect" coords="159,33,282,154" href="javascript:;">
+		  <area shape="rect" coords="464,33,591,156" href="javascript:;">
+		  <area shape="rect" coords="606,34,726,157" href="javascript:;">
+		  <area shape="rect" coords="304,3,454,155" href="javascript:;">
+		</map>
+	</div>
+	<div id="bottom_div_br"></div>
+<script type="text/javascript">
+//重建图片热点坐标
+	var ratio = $(document).width() / 750;
+	$('area').each(function(){
+		var coords = $(this).attr('coords');
+		var coords_array = coords.split(',');
+		var coords_new = '';
+		coords_new += parseInt(coords_array[0] * ratio)+',';
+		coords_new += parseInt(coords_array[1] * ratio)+',';
+		coords_new += parseInt(coords_array[2] * ratio) +',';
+		coords_new += parseInt(coords_array[3] * ratio)+',';
+		//coords_new = '0,0,0,0';
+		$(this).attr('coords', coords_new)
+		console.log(coords, coords_new);
+	});
+
+</script>

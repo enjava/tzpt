@@ -1,0 +1,9 @@
+
+.slider_1{width:100%; overflow:hidden;}
+.slider_1_wrap{ position: relative; overflow: visible!important;}
+.slider_1 ul:not([style*="translate3d"]) li:nth-of-type(n+2){display: none;}
+.slider_1 ul li a{display: block;}
+.slider_1 ul li img{width:100%; max-width:100%;}
+.slider_1 .slider_1_indicate{position:absolute; bottom:0; left:0; width:100%; z-index:100; text-align:center; pointer-events:none;}
+.slider_1 .slider_1_indicate span{display:inline-block; width:8px; height:8px; border-radius:10px; background:#757575; margin:10px 5px;}
+.slider_1 .slider_1_indicate span.on{background:#ffffff;}
